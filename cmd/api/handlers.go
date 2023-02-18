@@ -41,5 +41,5 @@ func (app *Config) SendMail(w http.ResponseWriter, r *http.Request) {
 		Message: "sent to " + requestPayload.To,
 	}
 
-	app.writeJSON(w, http.StatusAccepted, payload)
+	app.writeJSON(w, http.StatusOK, payload)
 }
